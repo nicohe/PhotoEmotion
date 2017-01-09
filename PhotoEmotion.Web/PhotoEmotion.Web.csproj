@@ -280,6 +280,9 @@
     <Content Include="Views\EmoPictures\Edit.cshtml" />
     <Content Include="Views\EmoPictures\Index.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Home\MostrarStatsRaw.cshtml" />
+    <Content Include="Views\Home\MostrarStats.cshtml" />
+    <Content Include="Views\Shared\_AlternLayout.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

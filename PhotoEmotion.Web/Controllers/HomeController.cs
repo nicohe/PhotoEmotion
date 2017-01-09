@@ -9,19 +9,32 @@ namespace PhotoEmotion.Web.Controllers
 {
     public class HomeController : Controller
     {
+        private PhotoEmotionWebContext db = new PhotoEmotionWebContext();
+
         // GET: Home
         public ActionResult Index()
         {
-            ViewBag.WelcomeMessage = "Hola Mundo";
-            ViewBag.ValorEntero = 1;
+            var modelo = new Home();
+            return View(modelo);
+        }
+
+        public ActionResult MostrarStats()
+        {
+            ViewBag.PictureCount = db.EmoPicture.Count();
+            ViewBag.FaceCount = db.EmoFace.Count();
+            ViewBag.EmotionCount = db.EmoEmotion.Count();
+            ViewBag.OtroValor = "Hola";
             return View();
         }
 
-        public ActionResult IndexAlt()
+        public ActionResult MostrarStatsRaw()
         {
-            var modelo = new Home();
-            modelo.WelcomeMessage = "Hola Mundo desde el modelo";
-            return View(modelo);
+            ViewBag.PictureCount = db.EmoPicture.Count();
+            ViewBag.FaceCount = db.EmoFace.Count();
+            ViewBag.EmotionCount = db.EmoEmotion.Count();
+            ViewBag.OtroValor = "Hola";
+            return View();
         }
+
     }
 }

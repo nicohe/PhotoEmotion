@@ -8,7 +8,7 @@ namespace PhotoEmotion.Web.Models
     public class Home
     {
         public int Id { get; set; }
-        public string WelcomeMessage { get; set; }
-        public string FooterMessage { get; set; } = "Footer by .Net";
+        public string WelcomeMessage { get; set; } = "Reconocedor de Emociones";
+        public string Footer { get; set; } = "Footer by .Net";
     }
 }
